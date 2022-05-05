@@ -37,7 +37,9 @@ body{
     padding-inline: 2.4rem;
 }
 
-
+ul{
+    list-style:none;
+}
 /* ===================--------------- NAVGATION-----------============================================== */
 nav {
     display:flex;
@@ -71,6 +73,58 @@ nav.scroll svg:nth-child(2) path{
     stroke:white;
 }
 
+/* =====================--------------- MENU ESCONDIDO------==================== */
+.menu,
+.close-menu{
+    visibility:hidden;
+}
+
+body.menu-expanded .menu,
+body.menu-expanded .close-menu{
+    visibility: visible;
+}
+
+body.menu-expanded{
+    overflow:hidden;
+}
+
+body.menu-expanded .menu{
+    position:fixed;
+    top:0;
+    left:0;
+    background-color: var(--green-solid);
+    width:100vw;
+    height:100vh;
+}
+
+body.menu-expanded nav{
+    position:relative;
+}
+
+.menu .button{
+background: white;
+border-radius: 4rem;
+font-weight: 700;
+font-size: 1.8rem;
+line-height: 2.3rem;
+text-transform: uppercase;
+text-decoration: none;
+
+color: var(--green-solid);
+
+display: inline-block;
+padding: 16px 32px;
+
+margin-top: 4.8rem;
+margin-bottom: 8rem;
+}
+
+.redes-sociais{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    gap:3.2rem;
+}
 
 /*=========================--------- header------============================== */
 header{
