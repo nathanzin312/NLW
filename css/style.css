@@ -29,12 +29,15 @@ body{
     font-family: 'DM Sans', sans-serif;
     font-weight:700;
     text-align: center;
+    overflow:overlay;
+    /* ovelay vai desconiderar o tamanho da barra de rolagem */
 }
 
 .wrapper{
     width:37.5rem;
     margin-inline: auto;
     padding-inline: 2.4rem;
+   
 }
 
 ul{
@@ -57,6 +60,9 @@ nav .wrapper{
     justify-content: space-between;
 }
 
+nav svg:nth-child(2) path{
+     stroke:#00856F;
+}
 
 nav.scroll{
     background:var(--green-solid);
@@ -69,13 +75,27 @@ nav.scroll svg:nth-child(1) path{
     fill:white;
 }
 
-nav.scroll svg:nth-child(2) path{
+nav.scroll .open-menu svg path{
     stroke:white;
 }
 
+nav button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
 /* =====================--------------- MENU ESCONDIDO------==================== */
+body.menu-expanded {
+    overflow: hidden;
+  }
+
+  body.menu-expanded > :not(nav){
+  display:none;
+  }
+
 .menu,
-.close-menu{
+.close-menu,
+body.menu-expanded .open-menu {
     visibility:hidden;
 }
 
@@ -99,6 +119,33 @@ body.menu-expanded .menu{
 
 body.menu-expanded nav{
     position:relative;
+}
+
+body.menu-expanded .logo{
+    position:relative;
+    z-index:100;
+}
+
+body.menu-expanded .logo svg path{
+    fill:white;
+}
+
+body.menu-expanded nav button{
+    position: relative;
+    z-index:100;
+}
+body.menu-expanded .menu ul:nth-child(1){
+    display:flex;
+    flex-direction:column;
+    gap:4.8rem;
+    margin-top:calc( 8rem + var(--nav-height));
+}
+
+body.menu-expanded .menu ul li a{
+    color:var(--beige);
+    text-decoration: none;
+    font-size:2.4rem;
+    line-height:3.1rem;
 }
 
 .menu .button{
