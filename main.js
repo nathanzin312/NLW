@@ -19,4 +19,8 @@ function closeMenu(){
     document.body.classList.remove('menu-expanded');
 }
 
-ScrollReveal().reveal('img');
+    ScrollReveal({
+        origin:'top',
+        distance:'30px',
+        duration:700,
+    }).reveal('#home,img, .card ,#services, #about');
