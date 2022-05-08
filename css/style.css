@@ -6,14 +6,16 @@
 
     /* cores */
 :root{   
+    --brand-green:#00856F;
+    --brand-green-light:#DCE9E2;
     --green-light : #DCE9E2 ;
-    --green-solid:#00856F;
-    --dark-green:#00453A;
     --ultra-green:#F7F9F9;
     --beige:#FFFAF1;
+    --dark-green:#00453A;
+    --brand-green-hover:#00453A;
     --gray-headline:#212529;
     --gray-paragrap: #495057;
-    --border-gray:#DCE9E2;
+   
 
     --nav-height: 7.2rem;
     font-size:63.5%;
@@ -100,7 +102,7 @@ nav svg:nth-child(2) path{
 }
 
 nav.scroll{
-    background:var(--green-solid);
+    background:var(--brand-green);
 }
 
 nav.scroll .logo path{
@@ -148,7 +150,7 @@ body.menu-expanded .menu{
     position:fixed;
     top:0;
     left:0;
-    background-color: var(--green-solid);
+    background-color: var(--brand-green);
 
     width:100vw;
     height:100vh;
@@ -236,7 +238,7 @@ margin-bottom: 8rem;
 }
 
 header .titulo-1{
-    color:var(--green-solid);
+    color:var(--brand-green);
     font-size: 1.4rem;
     margin-bottom: 1.6rem;
 }
@@ -255,9 +257,12 @@ header .titulo-1{
 }
 
 .button-whats{
-    background-color: var(--green-solid);
-    width:26.3rem;
-    height: 5.2rem;
+    background-color: var(--brand-green);
+
+    padding:1.6rem 3.2rem;
+    width:fit-content;
+    /* fit content vai dar o padding do conteudo 
+    pois o botao primariamente vai ocupar toda a largura disponivel */
 
     text-transform: uppercase;
 
@@ -271,20 +276,22 @@ header .titulo-1{
     margin-bottom: 6rem;
     border-radius: 4rem;
 
-    margin-right: auto;
-    margin-left: auto;
-
     text-decoration: none;
-    cursor:pointer;
+    transition: background 300ms;
 }
 
  .button-whats:hover{
-   filter:brightness(1.5);
+   /* filter:brightness(1.5); */
+   background-color:var( --brand-green-hover);
 }
 
 .button-whats span {
     color:#FFFFFF;
     font-size:1.4rem;
+}
+
+#home .button-whats{
+   margin-inline:auto;
 }
 img{
     width:26.3rem;
@@ -303,7 +310,7 @@ img{
     background-color: var(--beige);
 
     border-radius: 0.6rem;
-    border: 1px solid var(--border-gray);
+    border: 1px solid var(--brand-green-light);
 
     display:flex;
     flex-direction:column;
@@ -312,7 +319,7 @@ img{
 }
 
 .conteiner p{
-    color:var(--green-solid);
+    color:var(--brand-green);
     line-height: 150%;
 }
 
@@ -329,7 +336,7 @@ img{
 ===================================================================================*/
 
 #services header h3{
-    color:var(--green-solid);
+    color:var(--brand-green);
     font-size:1.4rem;
     line-height:150%;
     margin-bottom:1.6rem;
@@ -379,7 +386,7 @@ img{
      line-height:2.1rem;
      letter-spacing: 8%;
      text-transform: uppercase;
-     color:var(--green-solid);
+     color:var(--brand-green);
      margin-bottom: 1.6rem;
 }
 
@@ -418,9 +425,6 @@ img{
     margin-block: 3.2rem;
 }
 
-#contato button{
-    margin-left: 0;
-}
 
 #contato .wrapper img{
     width:100%;
@@ -430,8 +434,8 @@ img{
                                       footer
 ===================================================================================*/
 footer{
-    height: 28.5rem;
-    background-color: var(--green-solid);
+    /* height: 28.5rem; */
+    background-color: var(--brand-green);
     padding-block: 6rem;
     text-align: left;
 }
@@ -448,8 +452,14 @@ footer{
     display:flex;
     flex-direction:column;
     gap:1.2rem;
-    color:white;
+    color:var(--beige);
     font-size: 1.6rem;
     line-height: 2.1rem;
     
+}
+
+#logoFooter{
+    display:inline-block;
+    /* os itens a nao aceitam margem ne altura porque sao naturalmente
+    display inline quando coloca inline block para destravar esssas propriendades*/
 }
