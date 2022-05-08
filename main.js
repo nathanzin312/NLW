@@ -23,4 +23,4 @@ function closeMenu(){
         origin:'top',
         distance:'30px',
         duration:700,
-    }).reveal('#home,img, .card ,#services, #about');
+    }).reveal('#home,img, .card ,#services, #about,#contato, img, footer');

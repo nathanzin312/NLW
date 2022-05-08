@@ -59,7 +59,21 @@ img {
 ul{
     list-style:none;
 }
-/* ===================--------------- NAVIGATION-----------============================================== */
+
+h2{
+    font-size:3rem;
+    line-height:3.9rem;
+    color:var(--gray-headline);
+}
+
+p{
+    font-size:1.6rem;
+    color:var(--gray-paragrap);
+    font-weight: 400;
+}
+/* ================================================================================
+                                   Navigation
+===================================================================================*/
 nav {
     display:flex;
 
@@ -104,7 +118,9 @@ nav button {
   }
 
 
-/* =====================--------------- MENU ESCONDIDO------==================== */
+/* ================================================================================
+                                expanded menu
+===================================================================================*/
 body.menu-expanded {
     overflow: hidden;
   }
@@ -196,7 +212,9 @@ margin-bottom: 8rem;
     gap:3.2rem;
 }
 
-/*=========================--------- header------============================== */
+/* ================================================================================
+                                       home
+===================================================================================*/
 
 #home{
     padding-bottom: 0px;
@@ -230,15 +248,9 @@ header .titulo-1{
     margin-bottom: 2.4rem;
 }
 
-#home header p{
-    font-size:1.6rem;
-    font-weight: 400;
-}
-
 .content #p1{
     font-size: 1.8rem;
     line-height: 150%;
-    color:var(--gray-paragrap);
     margin-bottom: 3.2rem;
 }
 
@@ -262,6 +274,7 @@ header .titulo-1{
     margin-right: auto;
     margin-left: auto;
 
+    text-decoration: none;
     cursor:pointer;
 }
 
@@ -279,7 +292,9 @@ img{
     margin-inline:auto;
     object-position: 0 2rem;
 }
-/* ===========------------- itens de informaçoes----========================== */
+/* ================================================================================
+                                Itens de informaçao
+===================================================================================*/
 .conteiner{
     width: 32.7rem;
     /* padding block muda o pading em cima e em baixo */
@@ -299,7 +314,6 @@ img{
 .conteiner p{
     color:var(--green-solid);
     line-height: 150%;
-    font-size: 1.6rem;
 }
 
 .conteiner h3{
@@ -310,7 +324,9 @@ img{
 }
 
 
-/* ===============--------------SERVICES-----------================== */
+/* ================================================================================
+                                       Services
+===================================================================================*/
 
 #services header h3{
     color:var(--green-solid);
@@ -322,11 +338,8 @@ img{
 }
 
 #services header h2{
-    font-size:3rem;
-    line-height:3.9rem;
     text-align: center;
     margin-bottom:6rem;
-    color:var(--gray-headline);
 }
 
 #services .cards{
@@ -350,15 +363,10 @@ img{
     color:var(--gray-headlin)
 }
 
-#services .card p{
-    font-size:1.6rem;
-    color:var(-gray-paragrap);
-    
-}
 
-/* ======================================================================
-                                About
-============================================================================= */
+/* ================================================================================
+                                      ABout
+===================================================================================*/
 
 #about{
     text-align: left;
@@ -376,15 +384,11 @@ img{
 }
 
 #about h2{
-    font-size:3rem;
-    line-height:3.9rem;
     margin-bottom: 2.4rem;
 }
 
 #about p{
     margin-bottom: 6rem;
-    color:var(--gray-paragrap);
-    font-size:1.6rem;
 }
 
 #about img{
@@ -398,10 +402,7 @@ img{
    text-align:left;
 }
 
-#contato h2{
-    font-size:3rem;
-    line-height: 3.9rem;
-}
+
 .contatos{
     font-size:1.4rem;
     color:var(--gray-paragrap);
@@ -435,7 +436,9 @@ footer{
     text-align: left;
 }
 
- .redes-sociais:nth-last-child(1){
+#redesSocias-footer{
+    display: flex;
+    gap:3.2rem;
    justify-content:left;
    margin-top: 3.2rem;
 }
