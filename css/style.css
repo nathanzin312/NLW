@@ -179,7 +179,7 @@ body.menu-expanded .menu  ul:nth-child(1){
     display:flex;
     flex-direction:column;
     gap:4.8rem;
-    margin-top:calc( 4.1rem + var(--nav-height));
+    margin-top:var(--nav-height);
 }
 
 body.menu-expanded .menu ul li a{
@@ -194,17 +194,24 @@ background: white;
 border-radius: 4rem;
 font-weight: 700;
 font-size: 1.8rem;
-line-height: 2.3rem;
 text-transform: uppercase;
 text-decoration: none;
 
-color: var(--green-solid);
+color: var(--brand-green);
 
 display: inline-block;
 padding: 16px 32px;
+border: 1px solid var(--brand-green);
 
 margin-top: 4.8rem;
 margin-bottom: 8rem;
+}
+
+.menu .button:hover{
+    background-color: var(--brand-green);
+    color:white;
+    border: 1px solid white;
+    
 }
 
 .redes-sociais{
@@ -462,4 +469,29 @@ footer{
     display:inline-block;
     /* os itens a nao aceitam margem ne altura porque sao naturalmente
     display inline quando coloca inline block para destravar esssas propriendades*/
+}
+
+
+/* ================================================================================
+                            Botao que volta pro topo
+===================================================================================*/
+
+#ToTopButton{
+    position:fixed;
+    bottom: 1.5vw;
+   right:1.5vw;
+
+   opacity: 0;
+   visibility:hidden;
+
+   transform:translateY(100%);
+   transition:300ms;
+}
+
+
+#ToTopButton.show{
+    opacity:1;
+    visibility:visible;
+
+    transform: translateY(0);
 }
