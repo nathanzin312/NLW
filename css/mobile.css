@@ -39,14 +39,14 @@ body{
     overflow:overlay;
     /* ovelay vai desconiderar o tamanho da barra de rolagem */
     
+    width:100vw;
     background-color: var(--ultra-green);
 }
 
 .wrapper{
-    width:37.5rem;
+    width: min(50rem , 100%);
     margin-inline: auto;
     padding-inline: 2.4rem;
-   
 }
 
 section{
@@ -144,7 +144,12 @@ body.menu-expanded .close-menu{
 
 .menu {
     transform: translateY(100%);
+    position:fixed;
   }
+
+.close-menu{
+    position: fixed;
+}
 
 body.menu-expanded .menu{
     position:fixed;
@@ -310,7 +315,7 @@ img{
                                 Itens de informaçao
 ===================================================================================*/
 .conteiner{
-    width: 32.7rem;
+    width: 100%;
     /* padding block muda o pading em cima e em baixo */
     padding-block:4rem;
 
@@ -477,9 +482,9 @@ footer{
 ===================================================================================*/
 
 #ToTopButton{
-    position:fixed;
-    bottom: 1.5vw;
-   right:1.5vw;
+   position:fixed;
+   bottom: 2rem;
+   right:2rem;
 
    opacity: 0;
    visibility:hidden;
@@ -494,4 +499,12 @@ footer{
     visibility:visible;
 
     transform: translateY(0);
+}
+
+#ToTopButton.color svg circle{
+   fill:var(--brand-green-light)
+}
+
+#ToTopButton.color svg path{
+  stroke:var(--brand-green);
 }

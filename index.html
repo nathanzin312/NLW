@@ -9,12 +9,13 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/mobile.css" rel="stylesheet" />
+    <link href="css/laptop.css" rel="stylesheet" />
     <title>DoctorCare</title>
   </head>
 
   <body >
-    <nav id="navigation" class="">
+    <nav id="navigation">
       <div class="wrapper">
         <a href="#home" class="logo">
           <svg
@@ -69,9 +70,9 @@
 
         <div class="menu">
           <ul>
-            <li><a href="#home" onclick="closeMenu()">Inicio</a></li>
-            <li><a href="#services" onclick="closeMenu()">Serviços</a></li>
-            <li><a href="#about" onclick="closeMenu()">Sobre</a></li>
+            <li id="l1"><a href="#home" onclick="closeMenu()" >Inicio</a></li>
+            <li id="l2"><a href="#services" onclick="closeMenu()">Serviços</a></li>
+            <li id="l3"><a href="#about" onclick="closeMenu()">Sobre</a></li>
           </ul>
 
           <a onclick="closeMenu()" href="#contato" class="button">Agende sua consulta</a>
@@ -222,6 +223,7 @@
 
     <section id="home">
       <div class="wrapper">
+        <div class="col-a">
         <header>
           <h3 class="titulo-1">BOAS-VINDAS A DOCTORCARE 👋</h3>
           <h1>Assistência médica simplificada para todos</h1>
@@ -247,7 +249,9 @@
             </svg>
             <span>Agende sua consulta</span>
           </a>
-
+        </div>
+        </div>
+        <div class="col-b">
           <img
             src="assets/imagemulher-de-moletom.png"
             alt="Mulher negra vestindo moletom verde e sorrindo"
@@ -588,7 +592,7 @@
         </div>
     </footer>
 
-    <a href="#home" id="ToTopButton">
+    <a href="#home" id="ToTopButton" >
       <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="20" cy="20" r="20" fill="#00856F"/>
         <path d="M20 27V13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
