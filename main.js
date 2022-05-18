@@ -25,7 +25,9 @@ function showNav(){
 
 
 function showButton(){
-    if(scrollY>=600){
+    ;
+    // 600
+    if(scrollY>= services.offsetTop){
        ToTopButton.classList.add('show');
     }
     else{
@@ -35,9 +37,7 @@ function showButton(){
 }
 
 function colorChange(){
-    // if(scrollY>=4824){
-    // if(scrollY >= footer.offsetTop){
-    if(scrollY + innerHeight  >= footer1.offsetTop){
+    if(scrollY + innerHeight > (contato.offsetTop + contato.offsetHeight + 25)){
         ToTopButton.classList.add('color1');
     }
     else{
@@ -53,14 +53,16 @@ function closeMenu(){
     document.body.classList.remove('menu-expanded');
 }
 
-    ScrollReveal({
+
+ScrollReveal({
         origin:'top',
         distance:'30px',
         duration:700,
-    }).reveal('#home,img, .card ,#services, #about,#contato, img, footer');
+}).reveal('#home,img, .card ,#services, #about,#contato, img, footer');
+
 
 function menu(){
-   const line = scrollY + innerHeight / 2;
+    const line = scrollY + innerHeight / 2;
     console.log(services.offsetTop);
    if(line<=services.offsetTop){
        l1.classList.add('borderMenu');
@@ -77,4 +79,9 @@ function menu(){
        l1.classList.remove('borderMenu');
        l2.classList.remove('borderMenu');
    }
+}
+
+
+function activateMenuSection(){
+
 }

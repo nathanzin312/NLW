@@ -477,6 +477,23 @@ footer{
 }
 
 
+.gitHub,
+.gitHub :nth-last-child(1){
+    width:3rem;
+}
+
+.gitHub svg path{
+    fill:white;
+    stroke:#757575;
+    stroke-width: 0.9;
+}
+
+.redes-sociais.pessoal{
+    gap:1rem;
+    justify-content: left;
+    margin-bottom:0;
+}
+
 /* ================================================================================
                             Botao que volta pro topo
 ===================================================================================*/
@@ -491,6 +508,8 @@ footer{
 
    transform:translateY(100%);
    transition:300ms;
+
+   padding: 0;
 }
 
 
