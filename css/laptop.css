@@ -2,11 +2,36 @@
     /* ================================================================================
                                        Geral
     ===================================================================================*/
+   body{
+        overflow:auto;
+        width: 100%;
+   }
     .wrapper{
         width: min(112rem , 100%);
         display:grid;
     }
-   
+
+    section{
+        padding-block:16rem;
+    }
+
+    section h2{
+        font-size:4rem;
+        line-height:5.2rem;
+    }
+
+    .col-a{
+        grid-area: A;
+    }
+
+    .col-b{
+        grid-area: B;
+    }
+
+    /* ================================================================================
+                                      nav
+    ===================================================================================*/
+
     nav#navigation .wrapper * {
             margin:0;
             padding:0;
@@ -80,7 +105,7 @@
             height:100%;
         }
 
-        /* ================================================================================
+    /* ================================================================================
                                        scroll
     ===================================================================================*/
 
@@ -106,11 +131,158 @@
             opacity:1;
         } 
 
-          /* ================================================================================
+    /* ================================================================================
                                       home
     ===================================================================================*/
+    #home {
+       padding-top: var(--nav-height);
+    }
 
+    #home header::before{
+        height:calc( 80% + var(--nav-height) );
+    }
     #home .wrapper{
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 60% 40%;
+        grid-template-areas: 
+        'A B'
+        'C C';
     }
+
+    #home .col-a{
+        text-align: left;
+        align-self: center;
     }
+
+
+    #home .conteiner{
+        grid-area:C;
+        flex-direction:row;
+        padding:6rem;
+
+        gap:0;
+    }
+
+    #home img{
+        width:42rem;
+    }
+
+    /*  .intes+ itens vai selecionar TODAS as propriedades que tiverem itens antes ou seja vai pegar todas menos a primeira*/
+    #home .conteiner .itens + .itens{
+        border-left:1px solid var(--brand-green);
+    }
+
+    /* quando o conteiner é flex a propriedade flex nos itens divide o espaço ocupado de forma igual */
+    #home .conteiner .itens{
+       flex:1;
+    }
+
+    #home h1{
+        font-size: 5.2rem;
+line-height: 130%;
+    }
+
+    #home .button-whats{
+        margin:0;
+    }
+    /* ================================================================================
+                                    Services
+    ===================================================================================*/
+    #services h2{
+        width:49rem;
+        margin-inline:auto;
+    }
+ 
+    /* flex-wrap faz com que os itens se ajustes dentro da div */
+    #services .cards{
+        flex-direction: row;
+        flex-wrap:wrap;
+    }
+
+    /* flexx-grow faz os itnes crescerem e ocuparem os espaços que sobram */
+    #services .cards .card{
+        width:30%;
+        flex-grow: 1;
+    }
+
+    /* ================================================================================
+                                    about
+    ===================================================================================*/
+    #about .wrapper{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'B A';
+        gap:6.7rem;
+    }
+
+    #about .wrapper img{
+        width:48rem;
+    }
+
+    #about .wrapper .col-a{
+        align-self: center;
+    }
+
+    #about .wrapper p{
+       margin-bottom: 0;
+    }
+
+    /* ================================================================================
+                                   contatos
+    ===================================================================================*/
+
+    #contato .wrapper{
+        grid-template-columns: 2fr 3fr;
+        grid-template-areas: 'A B';
+        gap:14.1rem;
+    }
+
+    #contato .wrapper .col-a{
+        align-self: center;
+        /* align-items: left; */
+        width:40.4rem;
+    }
+    
+    #contato .wrapper img{
+        /* width:57.5rem; */
+        margin-block:0;
+    }
+
+    #contato .wrapper .button-whats{
+        margin:0;
+    }
+   
+    /* ================================================================================
+                                   footer
+    ===================================================================================*/
+     
+    footer .wrapper {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'A B';
+    }
+  
+    footer .col-a{
+        align-items: center;   
+    }
+
+    footer .col-b{
+       margin-right:0;
+       margin-block:auto;
+    }
+
+    #redesSocias-footer{
+       justify-content:right;
+       margin-right: 0;
+       /* margin-block:auto; */
+    }
+
+    /* ================================================================================
+                                   button
+    ===================================================================================*/
+
+    #ToTopButton.color svg circle{
+        fill:var(--brand-green-light);
+     }
+     
+     #ToTopButton.color svg path{
+       stroke:var(--brand-green);
+     }
+}

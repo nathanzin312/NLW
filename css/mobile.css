@@ -231,7 +231,7 @@ margin-bottom: 8rem;
 ===================================================================================*/
 
 #home{
-    padding-bottom: 0px;
+    padding-block: 0;
     padding-top: calc(4.1rem + var(--nav-height) );
 }
 
@@ -242,7 +242,7 @@ margin-bottom: 8rem;
     position:absolute;
     content:"";
     width:100%;
-    height:calc( 108rem + var(--nav-height) );
+    height:calc( 80% + var(--nav-height) );
     z-index:-1;
     background-color: var(--green-light);
     top:0;
@@ -434,7 +434,7 @@ img{
     display: flex;
     flex-direction: column;
     gap:1.6rem;
-    margin-block: 3.2rem;
+    margin-block: 4rem;
 }
 
 
@@ -501,10 +501,10 @@ footer{
     transform: translateY(0);
 }
 
-#ToTopButton.color svg circle{
-   fill:var(--brand-green-light)
+#ToTopButton.color1 svg circle{
+   fill:#DCE9E2;
 }
 
-#ToTopButton.color svg path{
+#ToTopButton.color1 svg path{
   stroke:var(--brand-green);
 }
