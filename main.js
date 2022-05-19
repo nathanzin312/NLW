@@ -9,6 +9,10 @@ function onScroll(){
     showNav();
     showButton();
     menu();
+    activateMenuSection(home);
+    activateMenuSection(services);
+    activateMenuSection(about);
+    activateMenuSection(contato);
 }
 
 function showNav(){
@@ -63,7 +67,6 @@ ScrollReveal({
 
 function menu(){
     const line = scrollY + innerHeight / 2;
-    console.log(services.offsetTop);
    if(line<=services.offsetTop){
        l1.classList.add('borderMenu');
        l2.classList.remove('borderMenu');
@@ -82,6 +85,24 @@ function menu(){
 }
 
 
-function activateMenuSection(){
+// function activateMenuSection(services){
+//     const line = scrollY + innerHeight/2;
 
-}
+
+//     const sectionTop = services.offsetTop;
+//     const sectionEnd = sectionTop + services.offsetHeight;
+
+//     const sectionTopPassedLine = line > sectionTop;
+//     const sectionEndPassedLine = line > sectionEnd;
+
+//     const result = sectionTopPassedLine && !sectionEndPassedLine;
+
+//     const id = services.getAttribute('id');
+//     const element = document.querySelector(`.menu a[href*=${id}]`);
+
+//    element.classList.remove('boderMenu');
+//     if(result){
+//         element.classList.add('boderMenu');
+//     }
+
+// }
