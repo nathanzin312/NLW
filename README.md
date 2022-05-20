@@ -17,4 +17,7 @@ DoctorCare é uma página institucional no formato One Page, responsiva, para us
 ## 	:framed_picture: Layout
 
 O layout do projeto esta no figma [link](https://www.figma.com/community/file/1102912263666619803)
-. 
+
+## Link do site no ar
+  [DoctorCare](https://nathanzin312.github.io/nlw/)
+
