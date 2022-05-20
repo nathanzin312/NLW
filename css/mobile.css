@@ -457,6 +457,7 @@ footer{
     gap:3.2rem;
    justify-content:left;
    margin-top: 3.2rem;
+   visibility: hidden;
 }
 
 .rodape{
@@ -493,6 +494,8 @@ footer{
     justify-content: left;
     margin-bottom:0;
 }
+
+
 
 /* ================================================================================
                             Botao que volta pro topo

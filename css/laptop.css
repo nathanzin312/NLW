@@ -271,6 +271,7 @@ line-height: 130%;
     #redesSocias-footer{
        justify-content:right;
        margin-right: 0;
+       visibility:visible;
        /* margin-block:auto; */
     }
 
